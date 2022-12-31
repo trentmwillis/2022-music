@@ -180,100 +180,102 @@ export default [
     id: "pup",
     youtubeId: "g8m1mWqDqVY"
   },
-
-
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Stick To Your Guns",
+    album: "Spectre",
+    song: "More of Us Than Them",
+    genre: ["melodic hardcore"],
+    review: "\"Anthemic\" is the first word that comes to mind when I think about Stick To Your Guns. Their particular brand of hardcore from Orange County is heavy and yet they have catchy chorus that feel like anthems for the scene. Overall, <em>Spectre</em> is not my favorite work from them, but \"More of Us Than Them\" definitely slaps.",
+    id: "stick-to-your-guns",
+    youtubeId: "ja7x7UXclb8"
   },
   {
     artist: "Mindforce",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: "",
+    album: "New Lords",
+    song: "Survival Is Vengeance",
+    genre: ["hardcore", "thrash"],
+    review: "Thrash-y hardcore is seeing somewhat of a revival as of late and Mindforce is one of the standard bearers for the movement. <em>New Lords</em> was not an album I expected to like and yet I've listened to it more-or-less on repeat since it was released. The songs are short and to the point, yet filled with catchy hooks, groovy riffs, and rhythm that makes me want to mosh. Plus, Jay's voice lends a unique flair to their sound.",
+    id: "mindforce",
+    youtubeId: "W_aTt6DSYuM",
     emphasized: true
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Chat Pile",
+    album: "God's Country",
+    song: "Why",
+    genre: ["sludge"],
+    review: "Sludge metal is not a genre I've ever really cared for, but I had to check this album out when it dropped and every other band I follow was talking about it. Overall, it's not really my cup o' tea, but some songs, like \"Why\", are so poignant and brutal that I had to pay attention. The lyrics and imagery are sometimes a little on the nose, but this an album that clearly has a message.",
+    id: "chat-pile",
+    youtubeId: "sER0FzJO-c0"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Holy Fawn",
+    album: "Dimensional Bleed",
+    song: "Death Is A Relief",
+    genre: ["shoegaze", "black metal", "post rock"],
+    review: "In general, shoegaze is not a preferred genre for me. Usually, it just feels like songs take too long to get their point across, but every now and then I find artists that really take you on a journey. Holy Fawn is one such artist and <em>Dimensional Bleed</em> is a wonderfully somber journey. The band describes their music as \"loud heavy pretty noises\" and I think that's spot on.",
+    id: "holy-fawn",
+    youtubeId: "4L5FpH0lRT0"
   },
   {
     artist: "Creepy Nuts",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: "",
+    album: "アンサンブル-プレイ (Ensemble Play)",
+    song: "2way nice guy",
+    genre: ["hip-hop", "indie"],
+    review: "Jazzy, upbeat, and catchy hip-hop is how I would describe Creepy Nuts' sound. The Japanese duo have a sound that is quite unlike anything else I've heard; you can tell they incorporate influences from a variety of genres into something new and fun. It's not for everyone, but I'd recommend giving it a chance.",
+    id: "creepy-nuts",
+    youtubeId: "iZtDuxKztgA",
     emphasized: true
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "JYOCHO",
+    album: "Let's Promise to Be Happy",
+    song: "Gather the Lights",
+    genre: ["folk", "math rock"],
+    review: "Take folksy indie music and sprinkle in some mathy, twinkly guitar riffs and you'll have an approximation of JYOCHO. <em>Let's Promise to Be Happy</em> is such an interesting album to me; it is equal parts calming, soothing, and engaging. Not typically in the realm of stuff I would normally listen to but I enjoy it.",
+    id: "jyocho",
+    youtubeId: "bJiqGdQrZL0"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "downt",
+    album: "SAKANA e.p.",
+    song: "minamisenju",
+    genre: ["indie"],
+    review: "downt is a band that I wish leaned more into their emo tendancies, but despite the vibe \"minamisenju\" gives off, most of this album is more subdued. Nonetheless, they were an important part of my exploration of indie music in Japan this year and this song has always stood out to me.",
+    id: "downt",
+    youtubeId: "jdSImgLJBLY"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Orthodox",
+    album: "Learning To Dissolve",
+    song: "Cave In",
+    genre: ["metalcore", "progressive metal"],
+    review: "From the opening notes of \"Cave In\", I knew <em>Learning To Dissolve</em> was going to be a metalcore album that would interest me. Orthodox takes a distinctly aggressive and dark approach to the metallic nu metal sound that has become increasingly popular over the last few years. This is a tight metal album that experiments in subtle ways and pays off.",
+    id: "orthodox",
+    youtubeId: "gXFmfDyTGGc"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "End It",
+    album: "Unpleasant Living",
+    song: "The Comeback",
+    genre: ["hardcore"],
+    review: "End It were the \"it\" band in the hardcore scene this year (not counting Turnstile) and for good reason. They have an old school sound that incorporates modern riffs and rhythm. Plus, their short songs work perfectly in an age of reduced attention spans.",
+    id: "end-it",
+    youtubeId: "V8NGssZGfLk"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Vatican",
+    album: "Ultra",
+    song: "Slipstream Annihilation",
+    genre: ["metalcore", "progressive metal"],
+    review: "Like <a href=\"#orthodox\">Orthodox</a>, Vatican are a metalcore band that is experimenting in that more metallic, aggressive space of the genre. They have subtle touches throughout their album that are just ear candy to me. Case in point, the synths on \"Slipstream Annihilation\". Easily one of my favorite metalcore releases of 2022.",
+    id: "vatican",
+    youtubeId: "q7HncSyfV1w"
   },
+
+
+
+
   {
     artist: "",
     album: "",
