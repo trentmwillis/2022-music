@@ -272,115 +272,107 @@ export default [
     id: "vatican",
     youtubeId: "q7HncSyfV1w"
   },
-
-
-
-
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
-  },
-  {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Unprocessed",
+    album: "Gold",
+    song: "Closer",
+    genre: ["progressive rock", "pop"],
+    review: "Easily my most anticipated album of the year. Formerly a djent band, Unprocessed have reinvented themselves as a progressive sort of rock band with pop influences. In some ways similar to <a href=\"#polyphia\">Polyphia</a> but in many ways their own, they have managed to craft a sound that appeals to the metalhead, guitarist, and melody lover in me. In short, I think most people could find at least one song of <em>Gold</em> that they enjoy.",
+    id: "unprocessed",
+    youtubeId: "XvHQDcpaM8Q"
   },
   {
     artist: "Pool Kids",
     album: "Pool Kids",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: "",
+    song: "Arm's Length",
+    genre: ["emo"],
+    review: "This album took me by surprise. I knew nothing about Pool Kids when they were announced on the <a href=\"#origami-angel-depart\">Origami Angel</a> tour this past fall, so I checked them out and was quickly captivated by this album. After seeing them live, its place as one of my favorites of the year was solidified.<br><br>This is an emo album with both atmosphere and catchy hooks. Maybe it's the subtle way it sounds like old-school Paramore, but this album gives me a sense of nostalgia while at the same time feeling very current and timely. Anyway, I dig it.",
+    id: "pool-kids",
+    youtubeId: "ayB8Whgkg_E",
     emphasized: true
   },
   {
-    artist: "Asunojokei",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: "",
+    artist: "Asunojokei (明日の叙景)",
+    album: "Island",
+    song: "Chimera",
+    genre: ["black metal", "shoegaze"],
+    review: "As I said for <a href=\"#holy-fawn\">Holy Fawn</a>, anything with shoegaze is not usually one of my preferred genres; takes too long to get where it's going in my opinion. Asunojokei, however, make the long journey worth it. <em>Island</em> and \"Chimera\" in particular are filled with unique and interesting twists and variations throughout. As one co-worker put it, it is \"somehow really catchy\".",
+    id: "asunojokei",
+    youtubeId: "IsVyACY3QDw",
     emphasized: true
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "World of Pleasure",
+    album: "World of Pleasure & Friends",
+    song: "Domination 2",
+    genre: ["metallic hardcore"],
+    review: "I speak a lot about bands that are both heavy but incorporate lighter elements, World of Pleasure is not one of them. This is straight up aggression and once “Domination 2” kicks in, it doesn't relent.",
+    id: "world-of-pleasure",
+    youtubeId: "apGgnc34Ang"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "coldrain",
+    album: "Nonnegative",
+    song: "Cut Me",
+    genre: ["alternative metal"],
+    review: "It's no shocker that I've long preferred coldrain's heavier side. Because of that, their last album wasn't one of my favorites, but <em>Nonnegative</em> was a return to form while still keeping some tracks that embraced their lighter side. Their blend of hard rock with metalcore always stands out in my music rotation; it's more radio-friendly while still being heavy.",
+    id: "coldrain",
+    youtubeId: "v_qzxGf7_xo"
   },
   {
     artist: "Camp Trash",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: "",
+    album: "The Long Way, The Slow Way",
+    song: "Weird Florida",
+    genre: ["emo", "indie"],
+    review: "This album was the soundtrack to my summer. Plenty of catchy hooks and upbeat vibes while still being emo at its core. Also helps that the band is from Florida and I got to see them live at the start of summer.",
+    id: "camp-trash",
+    youtubeId: "kkTqwcCsyaM",
     emphasized: true
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Speed",
+    album: "Gang Called Speed",
+    song: "Not That Nice",
+    genre: ["hardcore", "beatdown"],
+    review: "Yet another hardcore band not reinventing the wheel, but making a damn good wheel. Speed has been taking over the scene with their relentless positive attitude, representation of minorities in the scene, and beats that just get people moving. \"Respect each other. Respect this place. And mosh hard as f**k!\"",
+    id: "speed",
+    youtubeId: "EfCROIuI9VE"
   },
   {
     artist: "Earthists.",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: "",
+    album: "Have A Good Cult",
+    song: "Lost Grace",
+    genre: ["progressive metalcore"],
+    review: "Generally, I dislike \"progressive\" music which is just complex and technical instrumentality. But, \"progressive\" music which actually attempts to move a genre forward by incorporating other influences is endlessly interesting to me. <em>Have A Good Cult</em> is such an album. The piano-driven \"Lost Grace\" is one of the first singles I heard from this album and it is unlike any other metalcore song I've heard and in a good way.",
+    id: "earthists",
+    youtubeId: "PPATGjgahTc",
     emphasized: true
   },
   {
     artist: "Gridiron",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: "",
+    album: "No Good At Goodbyes",
+    song: "No Good At Goodbyes",
+    genre: ["hardcore"],
+    review: "Like several other albums on this list, <em>No Good At Goodbyes</em> doesn’t bring much new to the table, but it is solid for what it is. Growing up on Linkin Park, I've always had a soft spot for rap metal, so combine that with my newer interest in hardcore and you'll quickly see why I've been excited about Gridiron.",
+    id: "gridiron",
+    youtubeId: "Sp26zoWMYeo",
     emphasized: true
   },
   {
     artist: "Bad Omens",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: "",
+    album: "The Death of Peace of Mind",
+    song: "Just Pretend",
+    genre: ["metalcore", "post-hardcore", "alternative metal"],
+    review: "Bad Omens blew up this year and it was well deserved. <em>TDOPOM</em> is probably one my favorite albums of recent years and I could rave about it for paragraphs but, in short, it has everything I love about music in this scene. Give \"Just Pretend\" a listen.",
+    id: "bad-omens",
+    youtubeId: "ekU1dQjMsOQ",
     emphasized: true
   },
+
+
+
+
+
   {
     artist: "",
     album: "",
