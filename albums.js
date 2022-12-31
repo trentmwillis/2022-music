@@ -1,5 +1,14 @@
 export default [
   {
+    artist: "Soul Glo",
+    album: "Diaspora Problems",
+    song: "Coming Correct Is Cheaper",
+    genre: ["hardcore", "hip-hop", "noise"],
+    review: "A late addition to this list. When I first checked out Soul Glo in the early part of the year, it didn't resonate with me. After seeing so many glowing reviews of <em>Diaspora Problems</em>, I decided to give them another shot and saw the light.<br><br>This album reminds me equally of Showbread, <a href=\"#show-me-the-body\">Show Me The Body</a>, and Injury Reserve. It's a blend of hardcore, punk, hip-hop, and noise which is at times really engaging and groovy, and at other times kind of off-putting. It's a fun ride, but not one for everyone.",
+    id: "soul-glo",
+    youtubeId: "NfBS7g9EPgI"
+  },
+  {
     artist: "ANORAK!",
     album: "ANORAK!",
     song: "吉祥寺 (Kichijoji)",
@@ -23,7 +32,7 @@ export default [
     album: "Hello",
     song: "Goodbye to Romance",
     genre: ["j-rock"],
-    review: "Typically, I dislike genres like “J-Rock” because it reveals little about the sound of the band other than the country of origin. In Rottengraffty's case, I feel it is appropriate. The rock and metal band has such a variety over the course of <em>Hello</em> that it is hard to pin down a specific sub-genre. “Goodbye to Romance” is one of their softer songs and it hits right in the feels.",
+    review: "Typically, I dislike genres like \"J-Rock\" because it reveals little about the sound of the band other than the country of origin. In Rottengraffty's case, I feel it is appropriate. The rock and metal band has such a variety over the course of <em>Hello</em> that it is hard to pin down a specific sub-genre. \"Goodbye to Romance\" is one of their softer songs and it hits right in the feels.",
     id: "rottengraffty",
     youtubeId: "KXVuRfMqhb8"
   },
@@ -32,7 +41,7 @@ export default [
     album: "Trouble The Water",
     song: "We Came To Play",
     genre: ["hardcore", "noise", "punk"],
-    review: "Show Me The Body’s banjo-led, noise-influenced brand of hardcore doesn’t always land for me, but when it does, I’m all in. They’re one of those rare bands where you can tell they stay true to their values, in their lyrics, their music, and the community they’ve fostered. “We Came To Play” showcases all of that while delivering catchy riffs to boot.",
+    review: "Show Me The Body's banjo-led, noise-influenced brand of hardcore doesn't always land for me, but when it does, I'm all in. They're one of those rare bands where you can tell they stay true to their values, in their lyrics, their music, and the community they've fostered. \"We Came To Play\" showcases all of that while delivering catchy riffs to boot.",
     id: "show-me-the-body",
     youtubeId: "qO2pLviiTi8"
   },
@@ -306,7 +315,7 @@ export default [
     album: "World of Pleasure & Friends",
     song: "Domination 2",
     genre: ["metallic hardcore"],
-    review: "I speak a lot about bands that are both heavy but incorporate lighter elements, World of Pleasure is not one of them. This is straight up aggression and once “Domination 2” kicks in, it doesn't relent.",
+    review: "I speak a lot about bands that are both heavy but incorporate lighter elements, World of Pleasure is not one of them. This is straight up aggression and once \"Domination 2\" kicks in, it doesn't relent.",
     id: "world-of-pleasure",
     youtubeId: "apGgnc34Ang"
   },
@@ -353,7 +362,7 @@ export default [
     album: "No Good At Goodbyes",
     song: "No Good At Goodbyes",
     genre: ["hardcore"],
-    review: "Like several other albums on this list, <em>No Good At Goodbyes</em> doesn’t bring much new to the table, but it is solid for what it is. Growing up on Linkin Park, I've always had a soft spot for rap metal, so combine that with my newer interest in hardcore and you'll quickly see why I've been excited about Gridiron.",
+    review: "Like several other albums on this list, <em>No Good At Goodbyes</em> doesn't bring much new to the table, but it is solid for what it is. Growing up on Linkin Park, I've always had a soft spot for rap metal, so combine that with my newer interest in hardcore and you'll quickly see why I've been excited about Gridiron.",
     id: "gridiron",
     youtubeId: "Sp26zoWMYeo",
     emphasized: true
@@ -368,90 +377,85 @@ export default [
     youtubeId: "ekU1dQjMsOQ",
     emphasized: true
   },
-
-
-
-
-
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "No Pressure",
+    album: "No Pressure",
+    song: "Too Far",
+    genre: ["pop punk"],
+    review: "This album came out of nowhere for me. I had never heard of No Pressure, but on release day so many bands I follow were posting about it, and for good reason. <em>No Pressure</em> leans more on the punk than the pop, but still is super fun to listen to. Nothing really new, just really solid pop punk.",
+    id: "no-pressure",
+    youtubeId: "jZw9L3P7p24"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "malevolence",
+    album: "Malicious Intent",
+    song: "On Broken Glass",
+    genre: ["metalcore"],
+    review: "Probably my most anticipated metalcore album of the year. Malevolence is often described as \"metalcore Pantera\" but I think that undersells how unique they are in the scene. They write groovy riffs, blend a myriad of musical influences, and have catchy choruses, all while remaining undeniably metal and hardcore. They feel equally at home with hardcore bands and metal bands.",
+    id: "malevolence",
+    youtubeId: "mqoFbD1xVWM"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Killing Pace",
+    album: "Killing Pace",
+    song: "Extortion",
+    genre: ["metallic hardcore"],
+    review: "Killing Pace is a hardcore band in the vein of Nails, Ingrown, and company, meaning they honestly have more in common with death metal and thrash bands than hardcore punk. However, they stand out in that their fusion of those genres feels more balanced than the other bands I've mentioned. Or, maybe just balanced in a way that I prefer.",
+    id: "killing-pace",
+    youtubeId: "x8D90CXWFKo"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Erase Them",
+    album: "Crawling From The Negative",
+    song: "Walk of the Willing",
+    genre: ["metalcore", "beatdown"],
+    review: "Featuring Travis Tabron, the original vocalist for <a href=\"#varials\">Varials</a>, Erase Them is essentially Varials if they had stuck to their older sound. That means it's unapologetically heavy, has sick grooves, plenty of breakdowns, and production that doesn't feel overly polished.",
+    id: "erase-them",
+    youtubeId: "t30Mc_vgYVU"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Terror",
+    album: "Pain Into Power",
+    song: "One Thousand Lies",
+    genre: ["hardcore"],
+    review: "Terror has long been one of those bands that I enjoy live, but didn't listen to much. <em>Pain Into Power</em> changed that. Easily their most cohesive and consistent album to date, it has some straight up bangers and the main riff on \"One Thousand Lies\" just gets me.",
+    id: "terror",
+    youtubeId: "Y_ne93vKAt0"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Kublai Khan TX",
+    album: "Lowest Form of Animal",
+    song: "Swan Song",
+    genre: ["metalcore", "beatdown"],
+    review: "One of the most memorable concert moments from this year was hearing this song live: the crowd belting out the opening verse before absolutely exploding when the first riff kicks in. Kublai Khan have always had a knack for making extremely groovy, extremely heavy music and <em>Lowest Form of Animal</em> was no exception.",
+    id: "kublai-khan",
+    youtubeId: "NCvuEbimoDc"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Anxious",
+    album: "Little Green House",
+    song: "Growing Up Song",
+    genre: ["melodic hardcore", "emo"],
+    review: "Taking after late-era Title Fight, Anxious are more deserving of the \"successor\" title than One Step Closer in my opinion. Though they've been growing in more of an emo direction, they still feel at home with heavier bands, in the same way Movements do.",
+    id: "anxious",
+    youtubeId: "3UE0aluwQAI"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Belmont",
+    album: "Aftermath",
+    song: "Pain Now",
+    genre: ["progressive punk"],
+    review: "This self-labeled progressive punk band put out one of the most unexpectedly enjoyable albums for me of this year. Their mix of pop-punk song structure with metalcore production value and trap influences made for an album that is fun to listen to, sing along to, and mosh to.",
+    id: "belmont",
+    youtubeId: "4INg4KkRAuU"
   },
   {
-    artist: "",
-    album: "",
-    song: "",
-    genre: [],
-    review: "",
-    id: "",
-    youtubeId: ""
+    artist: "Underoath",
+    album: "Voyeurist",
+    song: "We're All Gonna Die",
+    genre: ["post-hardcore", "metalcore"],
+    review: "There's a lot to enjoy about Underoath's return to form on <em>Voyeurist</em>, but \"We're All Gonna Die\" is easily my favorite for the pure reason that it reminds me of pre-breakup Underoath. So, in short, nostalgia.",
+    id: "underoath",
+    youtubeId: "PEn_Fb4IPA4"
   }
 ];
