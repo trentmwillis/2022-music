@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2022 Music</title>
+
+    <style>
+      /* Breakpoints: 640, 768, 1024, 1280, 1536 */
+      /* Font/Space Sizes: 0.75rem, 1rem 1.333rem, 1.777rem, 2.369rem, 3.157rem */
+
+      html {
+        --scrollbarWidth: 15px; /* Most browser scrollbars are 13-18px wide, so round up a bit */
+        --pageWidth: calc(100vw - var(--scrollbarWidth));
+
+        --numColumns: 2;
+        --numGaps: calc(var(--numColumns) + 1);
+
+        --gapSize: 1.777rem;
+        --columnSize: calc((var(--pageWidth) - (var(--numGaps) * var(--gapSize))) / var(--numColumns));
+      }
+
+      @media (min-width: 640px) {
+        html {
+          --numColumns: 3;
+        }
+      }
+
+      @media (min-width: 768px) {
+        html {
+          --numColumns: 4;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        html {
+          --numColumns: 5;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        html {
+          --numColumns: 6;
+        }
+      }
+
+      @media (min-width: 1536px) {
+        html {
+          --numColumns: 7;
+        }
+      }
+
+      @media (min-width: 1920px) {
+        html {
+          --numColumns: 8;
+        }
+      }
+
+
+      *, *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: #102a43;
+        background-image: linear-gradient(135deg, #102A43, #243B53);
+        color: #F0F4F8;
+        font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+        margin: 0;
+        text-rendering: geometricPrecision;
+      }
+
+      strong {
+        display: inline-block;
+        position: relative;
+      }
+
+      strong::after {
+        background-color: #A2A5FC;
+        content: '';
+        height: 2px;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+      }
+
+      .site-header {
+        margin: 3.157rem 1.777rem;
+      }
+
+      .site-title {
+        color: #D9E2EC;
+        font-size: 1.777rem;
+        font-weight: normal;
+        line-height: 1;
+        margin: 0;
+        margin-bottom: 0.563rem;
+      }
+
+      .site-description {
+        margin: 0;
+      }
+
+      .container {
+        display: grid;
+        justify-content: center;
+        gap: var(--gapSize);
+        grid-auto-flow: row dense;
+        grid-template-columns: repeat(auto-fill, var(--columnSize));
+        margin: var(--gapSize);
+      }
+
+      .album {
+        border-radius: 4px;
+        grid-column-end: span 1;
+        grid-row-end: span 1;
+        height: var(--columnSize);
+        position: relative;
+        transition: outline 0.2s ease-out;
+        width: var(--columnSize);
+      }
+
+      .album.emphasized {
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+        height: calc((var(--columnSize) * 2) + var(--gapSize));
+        width: calc((var(--columnSize) * 2) + var(--gapSize));
+      }
+
+      .album-cover {
+        border-radius: 4px;
+        display: block;
+        opacity: 0.4;
+        transition: opacity 0.2s ease-out;
+        width: 100%;
+      }
+
+      .album:focus-within .album-cover,
+      .album:hover .album-cover,
+      .album:target .album-cover {
+        opacity: 1;
+      }
+
+      .album:target {
+        outline: 4px solid #A2A5FC;
+        outline-offset: 4px;
+      }
+
+      .sidepanel {
+        align-items: center;
+        bottom: 0;
+        background: rgba(15, 23, 42, 0.7);
+        backdrop-filter: blur(2px);
+        display: flex;
+        justify-content: center;
+        left: 0;
+        opacity: 0;
+        padding: 1.777rem;
+        padding-bottom: 5vh;
+        pointer-events: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transition: opacity 0.2s ease-in-out;
+        z-index: 1;
+      }
+
+      .album:target ~ .sidepanel {
+        opacity: 1;
+        pointer-events: initial;
+      }
+
+      .sidepanel-content {
+        background: #102A43;
+        border-radius: 4px;
+        box-sizing: content-box;
+        filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+        padding: 1.333rem;
+        width: 560px;
+      }
+
+      .sidepanel-header {
+        display: flex;
+      }
+
+      .sidepanel-info {
+        flex: 1;
+      }
+
+      .title {
+        font-size: 1.333rem;
+        line-height: 1;
+        margin: 0;
+        margin-bottom: 0.317rem;
+      }
+
+      .genre {
+        color: #9FB3C8;
+        line-height: 1;
+        margin: 0;
+      }
+
+      .close {
+        color: #486581;
+        line-height: 1.333rem;
+        text-decoration: none;
+        transition: color 0.2s ease-out;
+      }
+
+      .close:hover {
+        color: #BCCCDC;
+      }
+
+      .review {
+        line-height: 1.2;
+        margin: 1.333rem 0;
+      }
+
+      .review a {
+        color: inherit;
+      }
+
+      .video {
+        border-radius: 4px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="site-title">
+        Trent's <strong>2022</strong> in music
+      </h1>
+
+      <p class="site-description"><strong>50</strong> albums (in chronological-ish order) that became the soundtrack of my year</p>
+    </header>
+
+    <div id="container" class="container">
+      <div id="sidepanel" class="sidepanel">
+        <div class="sidepanel-content">
+          <div class="sidepanel-header">
+            <div class="sidepanel-info">
+              <h2 id="title" class="title"><em>Album</em> by Artist</h2>
+              <p id="genre" class="genre">genre, other genre</p>
+            </div>
+
+            <a href="#close" class="close">&#x2715;</a>
+          </div>
+
+          <p id="review" class="review">This is a review.</p>
+
+          <iframe id="video" class="video" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import albums from "./albums.js";
+
+      // window.innerWidth - document.documentElement.clientWidth
+
+      const container = document.getElementById('container');
+      const sidepanel = document.getElementById('sidepanel');
+
+      const containerContent = document.createDocumentFragment();
+      albums.forEach(album => {
+        const albumElement = document.createElement('div');
+        albumElement.id = album.id;
+        albumElement.classList.add('album');
+        if (album.emphasized) albumElement.classList.add('emphasized');
+
+        const albumImgElement = document.createElement('img');
+        albumImgElement.alt = `Album cover for "${album.album}" by ${album.artist}`;
+        albumImgElement.classList.add('album-cover');
+        albumImgElement.src = `./images/${album.id}.jpeg`;
+
+
+        const albumLinkElement = document.createElement('a');
+        albumLinkElement.href = `#${album.id}`;
+
+        albumLinkElement.appendChild(albumImgElement);
+        albumElement.appendChild(albumLinkElement);
+        containerContent.appendChild(albumElement);
+      });
+
+      container.insertBefore(containerContent, sidepanel);
+
+      const handleHashChange = () => {
+        const albumId = location.hash.substring(1);
+        const album = albums.find(a => a.id === albumId);
+        console.log(albumId, album);
+
+        const title = document.getElementById('title');
+        title.innerHTML = `<em>${album.album}</em> by ${album.artist}`;
+
+        const genre = document.getElementById('genre');
+        genre.textContent = album.genre.join(', ');
+
+        const review = document.getElementById('review');
+        review.innerHTML = album.review;
+
+        const video = document.getElementById('video');
+        video.src = `https://www.youtube-nocookie.com/embed/${album.youtubeId}`;
+      };
+      window.addEventListener('hashchange', handleHashChange);
+      handleHashChange();
+    </script>
+  </body>
+</html>
