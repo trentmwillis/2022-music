@@ -180,7 +180,7 @@
       }
 
       .sidepanel {
-        align-items: center;
+        align-items: end;
         bottom: 0;
         background: rgba(15, 23, 42, 0.7);
         backdrop-filter: blur(2px);
@@ -188,8 +188,7 @@
         justify-content: center;
         left: 0;
         opacity: 0;
-        padding: 1.777rem;
-        padding-bottom: 5vh;
+        padding: 0;
         pointer-events: none;
         position: fixed;
         right: 0;
@@ -203,13 +202,28 @@
         pointer-events: initial;
       }
 
+      @media (min-width: 640px) {
+        .sidepanel {
+          align-items: center;
+          padding: 1.777rem;
+          padding-bottom: 5vh;
+        }
+      }
+
       .sidepanel-content {
         background: #102A43;
         border-radius: 4px;
         box-sizing: content-box;
         filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+        max-width: 560px;
         padding: 1.333rem;
-        width: 560px;
+        padding-bottom: 3.157rem;
+      }
+
+      @media (min-width: 640px) {
+        .sidepanel-content {
+          padding-bottom: 1.333rem;
+        }
       }
 
       .sidepanel-header {
@@ -253,9 +267,18 @@
         color: inherit;
       }
 
+      .video-wrapper {
+        padding-bottom: calc((315 / 560) * 100%); /* Aspect Ratio */
+        position: relative;
+      }
+
       .video {
         border-radius: 4px;
-        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
       }
     </style>
   </head>
@@ -284,7 +307,9 @@
 
           <p id="review" class="review">This is a review.</p>
 
-          <iframe id="video" class="video" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrapper">
+            <iframe id="video" class="video" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
