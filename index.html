@@ -20,6 +20,8 @@
 
         --gapSize: 1.777rem;
         --columnSize: calc((var(--pageWidth) - (var(--numGaps) * var(--gapSize))) / var(--numColumns));
+
+        min-height: 100%;
       }
 
       @media (min-width: 640px) {
@@ -106,6 +108,30 @@
 
       .site-description {
         margin: 0;
+      }
+
+      .playlist-link {
+        background-color: #A2A5FC;
+        border-radius: 4px;
+        color: #102a43;
+        display: block;
+        font-weight: bold;
+        margin-top: 3.157rem;
+        padding: 0.75rem;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.2s ease-out;
+      }
+
+      .playlist-link:focus,
+      .playlist-link:hover {
+        background-color: #E6E6FF;
+      }
+
+      @media (min-width: 640px) {
+        .playlist-link {
+          width: max-content;
+        }
       }
 
       .container {
@@ -240,6 +266,8 @@
       </h1>
 
       <p class="site-description"><strong>50</strong> albums (in chronological-ish order) that became the soundtrack of my year</p>
+
+      <a class="playlist-link" href="https://open.spotify.com/playlist/3ZNv0w2WCzUnymZW1fpxcm?si=f6892f3708374e00" target="_blank">Open Spotify Playlist</a>
     </header>
 
     <div id="container" class="container">
