@@ -22,7 +22,7 @@ export default [
     album: "We're Not Here to Be Loved",
     song: "The Razor's Apple",
     genre: ["alternative metal", "shoegaze"],
-    review: "I am not a huge fan of Deftones-esque alt-metal, but every now and then I like a song or two in the genre. Freshwater's debut LP is probably the first full album that broke that trend. It has the perfect balance of dreamy atmosphere, punishing riffs, and aggression. Not necessarily a ground-breaking album, but one that I found myself listening to over and over again.",
+    review: "I am not a huge fan of Deftones-esque alt-metal, but every now and then I like a song or two in the genre. Fleshwater's debut LP is probably the first full album that broke that trend. It has the perfect balance of dreamy atmosphere, punishing riffs, and aggression. Not necessarily a ground-breaking album, but one that I found myself listening to over and over again.",
     id: "fleshwater",
     youtubeId: "Omul2aBWWKs",
     emphasized: true
@@ -60,7 +60,7 @@ export default [
     album: "Dark Sun",
     song: "Without Me",
     genre: ["post-hardcore"],
-    review: "Rory, the lead singer of Dayseeker, is one of my favorite vocalists in the genre as of late. Leaning more into pop-vocal stylings and ambient soundscapes than most of their contemporaries, <em>Dark Sun</em> should be right up there with Bad Omens' <em><a href=\"#bad-omens\">TDOPOM</a></em> getting radio play and attention for the scene (at least in my humble opinion).",
+    review: "Rory, the lead singer of Dayseeker, is one of my favorite vocalists in the genre as of late. Leaning more into pop-vocal stylings and ambient soundscapes than most of their contemporaries, <em>Dark Sun</em> should be right up there with Bad Omens' <em><a href=\"#bad-omens\">TDOPOM</a></em> getting radio play and attention for the scene (at least in my opinion).",
     id: "dayseeker",
     youtubeId: "2ZtfU8eRENw"
   },
@@ -96,7 +96,7 @@ export default [
     album: "アンサンブル-プレイ (Ensemble Play)",
     song: "2way nice guy",
     genre: ["hip-hop", "indie"],
-    review: "Jazzy, upbeat, and catchy hip-hop is how I would describe Creepy Nuts' sound. The Japanese duo have a sound that is quite unlike anything else I've heard; you can tell they incorporate influences from a variety of genres into something new and fun. It's not for everyone, but I'd recommend giving it a chance.",
+    review: "Jazzy, upbeat, and catchy hip-hop is how I would describe Creepy Nuts' sound. The Japanese duo have a sound that is quite unlike what you typically hear in the states; you can tell they incorporate influences from a variety of genres into something new and fun. It's not for everyone, but I'd recommend giving it a chance.",
     id: "creepy-nuts",
     youtubeId: "iZtDuxKztgA",
     emphasized: true
@@ -216,7 +216,7 @@ export default [
     album: "Color Decay",
     song: "Salt",
     genre: ["metalcore"],
-    review: "I've enjoyed every album The Devil Wears Prada have ever released and <em>Color Decary</em> is no exception. They continue to push the boundaries of metalcore in a way that I feel is both artistic and accessible (though some of my friends disagree and feel they're too \"avant garde\"). I've appreciated seeing the band mature and evolve into a distinct sound with totally abandoning their roots as a metalcore band.<br><br>\"Salt\" in particular is probably the most radio-friendly they've ever sounded and yet it doesn't feel out of place even amongst their heavier songs.",
+    review: "I've enjoyed every album The Devil Wears Prada have ever released and <em>Color Decay</em> is no exception. They continue to push the boundaries of metalcore in a way that I feel is both artistic and accessible (though some of my friends disagree and feel they're too \"avant garde\"). I've appreciated seeing the band mature and evolve into a distinct sound without totally abandoning their roots as a metalcore band.<br><br>\"Salt\" in particular is probably the most radio-friendly they've ever sounded and yet it doesn't feel out of place even amongst their heavier songs.",
     id: "the-devil-wears-prada",
     youtubeId: "9ldQAuWzIxY"
   },
@@ -234,7 +234,7 @@ export default [
     album: "Nonnegative",
     song: "Cut Me",
     genre: ["alternative metal"],
-    review: "It's no shocker that I've long preferred coldrain's heavier side. Because of that, their last album wasn't one of my favorites, but <em>Nonnegative</em> was a return to form while still keeping some tracks that embraced their lighter side. Their blend of hard rock with metalcore always stands out in my music rotation; it's more radio-friendly while still being heavy.",
+    review: "It's no shocker that I've long preferred coldrain's heavier side. Because of that, their last album wasn't one of my favorites, but <em>Nonnegative</em> was a return to form while still keeping some tracks that embraced their lighter side. Their blend of hard rock with metalcore always stands out in my music rotation; it's more radio-friendly than my usual fare while still being heavy.",
     id: "coldrain",
     youtubeId: "v_qzxGf7_xo",
     emphasized: true
@@ -244,7 +244,7 @@ export default [
     album: "Spectre",
     song: "More of Us Than Them",
     genre: ["melodic hardcore"],
-    review: "\"Anthemic\" is the first word that comes to mind when I think about Stick To Your Guns. Their particular brand of hardcore from Orange County is heavy and yet they have catchy chorus that feel like anthems for the scene. Overall, <em>Spectre</em> is not my favorite work from them, but \"More of Us Than Them\" definitely slaps.",
+    review: "\"Anthemic\" is the first word that comes to mind when I think about Stick To Your Guns. Their particular brand of hardcore from Orange County is heavy but with catchy choruses that feel like anthems for the scene. Overall, <em>Spectre</em> is not my favorite work from them, but \"More of Us Than Them\" definitely slaps.",
     id: "stick-to-your-guns",
     youtubeId: "ja7x7UXclb8"
   },
@@ -354,7 +354,7 @@ export default [
     album: "Gang Called Speed",
     song: "Not That Nice",
     genre: ["hardcore", "beatdown"],
-    review: "Yet another hardcore band not reinventing the wheel, but making a damn good wheel. Speed has been taking over the scene with their relentless positive attitude, representation of minorities in the scene, and beats that just get people moving. \"Respect each other. Respect this place. And mosh hard as f**k!\"",
+    review: "Yet another hardcore band not reinventing the wheel, but making a damn good wheel. Speed has been taking over the scene with their relentlessly positive attitude and beats that just get people moving. \"Respect each other. Respect this place. And mosh hard as f**k!\"",
     id: "speed",
     youtubeId: "EfCROIuI9VE"
   },
@@ -363,7 +363,7 @@ export default [
     album: "No Pressure",
     song: "Too Far",
     genre: ["pop punk"],
-    review: "This album came out of nowhere for me. I had never heard of No Pressure, but on release day so many bands I follow were posting about it, and for good reason. <em>No Pressure</em> leans more on the punk than the pop, but still is super fun to listen to. Nothing really new, just really solid pop punk.",
+    review: "This album came out of nowhere for me. I had never heard of No Pressure, but on release day so many bands I follow were posting about it, and for good reason. <em>No Pressure</em> leans more on the punk than the pop, but it is still super fun to listen to. Nothing really new, just really solid pop punk.",
     id: "no-pressure",
     youtubeId: "jZw9L3P7p24"
   },
