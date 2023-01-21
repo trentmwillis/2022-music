@@ -212,16 +212,17 @@
 
       .sidepanel-content {
         background: #102A43;
-        border-radius: 4px;
-        box-sizing: content-box;
         filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+        max-height: 90%;
         max-width: 560px;
+        overflow: auto;
         padding: 1.333rem;
         padding-bottom: 3.157rem;
       }
 
       @media (min-width: 640px) {
         .sidepanel-content {
+          border-radius: 4px;
           padding-bottom: 1.333rem;
         }
       }
