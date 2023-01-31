@@ -110,13 +110,19 @@
         margin: 0;
       }
 
+      .playlist-links {
+        display: flex;
+        margin-top: 3.157rem;
+        gap: var(--gapSize);
+      }
+
       .playlist-link {
         background-color: #A2A5FC;
         border-radius: 4px;
         color: #102a43;
         display: block;
+        flex: 1;
         font-weight: bold;
-        margin-top: 3.157rem;
         padding: 0.75rem;
         text-align: center;
         text-decoration: none;
@@ -130,7 +136,7 @@
 
       @media (min-width: 640px) {
         .playlist-link {
-          width: max-content;
+          flex: initial;
         }
       }
 
@@ -149,7 +155,8 @@
         grid-row-end: span 1;
         height: var(--columnSize);
         position: relative;
-        transition: outline 0.2s ease-out;
+        transition: opacity 2.5s ease-in-out, outline 0.2s ease-out, transform 2.5s ease-out;
+        transform: translateY(0);
         width: var(--columnSize);
       }
 
@@ -160,10 +167,22 @@
         width: calc((var(--columnSize) * 2) + var(--gapSize));
       }
 
+      .album.loading {
+        opacity: 0;
+        transform: translateY(10%);
+      }
+
+      .album-link {
+        display: block;
+        height: 100%;
+      }
+
       .album-cover {
         border-radius: 4px;
         display: block;
+        height: 100%;
         opacity: 0.4;
+        position: relative;
         transition: opacity 0.2s ease-out;
         width: 100%;
       }
@@ -179,7 +198,9 @@
         outline-offset: 4px;
       }
 
-      .sidepanel {
+      .overlay {
+        --buttonSize: 24px;
+
         align-items: end;
         bottom: 0;
         background: rgba(15, 23, 42, 0.7);
@@ -197,20 +218,20 @@
         z-index: 1;
       }
 
-      .album:target ~ .sidepanel {
+      .overlay.show {
         opacity: 1;
         pointer-events: initial;
       }
 
       @media (min-width: 640px) {
-        .sidepanel {
+        .overlay {
           align-items: center;
           padding: 1.777rem;
           padding-bottom: 5vh;
         }
       }
 
-      .sidepanel-content {
+      .overlay-content {
         background: #102A43;
         filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
         max-height: 90%;
@@ -221,18 +242,24 @@
       }
 
       @media (min-width: 640px) {
-        .sidepanel-content {
+        .overlay-content {
           border-radius: 4px;
           padding-bottom: 1.333rem;
         }
       }
 
-      .sidepanel-header {
+      .overlay-header {
         display: flex;
+        gap: 1.333rem;
       }
 
-      .sidepanel-info {
+      .overlay-info {
         flex: 1;
+      }
+
+      .overlay-controls {
+        display: flex;
+        justify-content: space-between;
       }
 
       .title {
@@ -249,14 +276,85 @@
       }
 
       .close {
-        color: #486581;
-        line-height: 1.333rem;
-        text-decoration: none;
-        transition: color 0.2s ease-out;
+        --thickness: 2px;
+
+        background: none;
+        border: none;
+        cursor: pointer;
+        height: var(--buttonSize);
+        padding: 0;
+        position: relative;
+        text-indent: -99999px;
+        width: var(--buttonSize);
       }
 
-      .close:hover {
-        color: #BCCCDC;
+      .close::before,
+      .close::after {
+        background-color: #486581;
+        content: '';
+        height: var(--buttonSize);
+        left: calc((var(--buttonSize) - var(--thickness)) / 2);
+        position: absolute;
+        top: 0;
+        transition: background-color 0.2s ease-out;
+        width: var(--thickness);
+      }
+
+      .close:hover::before,
+      .close:hover::after {
+        background-color: #BCCCDC;
+      }
+
+      .close::before {
+        transform: rotate(45deg);
+      }
+
+      .close::after {
+        transform: rotate(-45deg);
+      }
+
+      .previous,
+      .next {
+        background: none;
+        border: none;
+        cursor: pointer;
+        height: var(--buttonSize);
+        position: relative;
+        text-indent: -99999px;
+
+        width: var(--buttonSize);
+      }
+
+      .previous:focus::after,
+      .previous:hover::after {
+        border-right-color: #BCCCDC;
+      }
+
+      .next:focus::after,
+      .next:hover::after {
+        border-left-color: #BCCCDC;
+      }
+
+      .previous::after {
+        content: '';
+        position: absolute;
+        border-right: calc(var(--buttonSize) / 3 * 2) solid #486581;
+        border-top: calc(var(--buttonSize) / 2) solid transparent;
+        border-bottom: calc(var(--buttonSize) / 2) solid transparent;
+        top: 0;
+        left: calc(var(--buttonSize) / 6);
+        transition: border-right-color 0.2s ease-out;
+      }
+
+      .next::after {
+        content: '';
+        position: absolute;
+        border-left: calc(var(--buttonSize) / 3 * 2) solid #486581;
+        border-top: calc(var(--buttonSize) / 2) solid transparent;
+        border-bottom: calc(var(--buttonSize) / 2) solid transparent;
+        top: 0;
+        left: calc(var(--buttonSize) / 6);
+        transition: border-left-color 0.2s ease-out;
       }
 
       .review {
@@ -269,17 +367,42 @@
       }
 
       .video-wrapper {
+        margin-bottom: 1.333rem;
         padding-bottom: calc((315 / 560) * 100%); /* Aspect Ratio */
         position: relative;
+      }
+
+      .video-wrapper:not(.show)::after {
+        border-radius: 4px;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.05);
+        position: absolute;
+        animation: pulse 2s cubic-bezier(.4,0,.6,1) infinite;
+      }
+
+      @keyframes pulse {
+        50% {
+          opacity: .5;
+        }
       }
 
       .video {
         border-radius: 4px;
         height: 100%;
         left: 0;
+        opacity: 0;
         position: absolute;
         top: 0;
         width: 100%;
+      }
+
+      .video-wrapper.show .video {
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
       }
     </style>
   </head>
@@ -291,80 +414,89 @@
 
       <p class="site-description"><strong>50</strong> albums (in chronological-ish order) that became the soundtrack of my year</p>
 
-      <a class="playlist-link" href="https://open.spotify.com/playlist/3ZNv0w2WCzUnymZW1fpxcm?si=f6892f3708374e00" target="_blank">Open Spotify Playlist</a>
+      <div class="playlist-links">
+        <a class="playlist-link" href="https://open.spotify.com/playlist/3ZNv0w2WCzUnymZW1fpxcm?si=f6892f3708374e00" target="_blank">Open Spotify Playlist</a>
+        <a class="playlist-link" href="https://open.spotify.com/playlist/79q4BaCNh2nkWSfCXl9eRO?si=bce2def09ac644a4" target="_blank">Open Top 10 Playlist</a>
+      </div>
     </header>
 
-    <div id="container" class="container">
-      <div id="sidepanel" class="sidepanel">
-        <div class="sidepanel-content">
-          <div class="sidepanel-header">
-            <div class="sidepanel-info">
-              <h2 id="title" class="title"><em>Album</em> by Artist</h2>
-              <p id="genre" class="genre">genre, other genre</p>
-            </div>
+    <div id="container" class="container"></div>
 
-            <a href="#close" class="close">&#x2715;</a>
+    <div id="overlay" class="overlay">
+      <div class="overlay-content">
+        <div class="overlay-header">
+          <div class="overlay-info">
+            <h2 class="title"><em>Album</em> by Artist</h2>
+            <p class="genre">genre, other genre</p>
           </div>
 
-          <p id="review" class="review">This is a review.</p>
+          <button class="close" type="button">Close</button>
+        </div>
 
-          <div class="video-wrapper">
-            <iframe id="video" class="video" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+        <p class="review">This is a review.</p>
+
+        <div class="video-wrapper">
+          <iframe class="video" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="overlay-controls">
+          <button class="previous">Previous</button>
+          <button class="next">Next</button>
         </div>
       </div>
     </div>
 
     <script type="module">
       import albums from "./albums.js";
-
-      // window.innerWidth - document.documentElement.clientWidth
+      import { setupInteractions, setupOverlayActions } from "./interactions.js";
+      import { renderAlbums, renderAlbumOverlay, hideAlbumOverlay } from "./render.js";
 
       const container = document.getElementById('container');
-      const sidepanel = document.getElementById('sidepanel');
+      renderAlbums(container, albums);
 
-      const containerContent = document.createDocumentFragment();
-      albums.forEach(album => {
-        const albumElement = document.createElement('div');
-        albumElement.id = album.id;
-        albumElement.classList.add('album');
-        if (album.emphasized) albumElement.classList.add('emphasized');
+      let currentAlbum = null;
 
-        const albumImgElement = document.createElement('img');
-        albumImgElement.alt = `Album cover for "${album.album}" by ${album.artist}`;
-        albumImgElement.classList.add('album-cover');
-        albumImgElement.src = `./images/${album.id}.jpeg`;
-
-
-        const albumLinkElement = document.createElement('a');
-        albumLinkElement.href = `#${album.id}`;
-
-        albumLinkElement.appendChild(albumImgElement);
-        albumElement.appendChild(albumLinkElement);
-        containerContent.appendChild(albumElement);
-      });
-
-      container.insertBefore(containerContent, sidepanel);
-
-      const handleHashChange = () => {
+      const overlay = document.getElementById('overlay');
+      const onHashChange = () => {
         const albumId = location.hash.substring(1);
         const album = albums.find(a => a.id === albumId);
-        console.log(albumId, album);
 
-        const title = document.getElementById('title');
-        title.innerHTML = `<em>${album.album}</em> by ${album.artist}`;
-
-        const genre = document.getElementById('genre');
-        genre.textContent = album.genre.join(', ');
-
-        const review = document.getElementById('review');
-        review.innerHTML = album.review;
-
-        const video = document.getElementById('video');
-        video.src = `https://www.youtube-nocookie.com/embed/${album.youtubeId}`;
+        if (album) {
+          renderAlbumOverlay(overlay, album);
+          currentAlbum = album;
+        } else {
+          hideAlbumOverlay(overlay);
+          currentAlbum = null;
+        }
       };
-      window.addEventListener('hashchange', handleHashChange);
-      handleHashChange();
+      setupInteractions(onHashChange);
+
+      const getNextAlbumIndex = (next, index) => {
+        if (next) {
+          if (index >= albums.length - 1) {
+            return 0;
+          } else {
+            return index + 1;
+          }
+        } else {
+          if (index <= 0) {
+            return albums.length - 1;
+          } else {
+            return index - 1;
+          }
+        }
+      };
+      const onSeek = (next) => {
+        const albumIndex = albums.findIndex(a => a === currentAlbum);
+        const nextAlbumIndex = getNextAlbumIndex(next, albumIndex);
+        const nextAlbum = albums[nextAlbumIndex];
+
+        renderAlbumOverlay(overlay, nextAlbum);
+        currentAlbum = nextAlbum;
+
+        location.hash = `#${nextAlbum.id}`;
+      };
+      setupOverlayActions(overlay, onSeek);
     </script>
   </body>
 </html>
